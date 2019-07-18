@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorwhite"
+    android:layout_marginStart="@dimen/dp_30"
+    android:layout_marginEnd="@dimen/dp_30">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/color_3D3A3A"
+        android:textSize="@dimen/sp_16"
+        android:text="您确定要取消订单吗？"/>
+
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_F4F4F4"
+        android:layout_marginTop="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@+id/tv"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/line"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/call_number"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_20"
+            android:paddingBottom="@dimen/dp_20"
+            android:gravity="center"
+            android:textColor="@color/color_8B8989"
+            android:textSize="@dimen/sp_16"
+            android:text="点错了"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:background="@color/color_F4F4F4"/>
+
+        <TextView
+            android:id="@+id/tv_ok"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_20"
+            android:paddingBottom="@dimen/dp_20"
+            android:textColor="@color/color_F76646"
+            android:textSize="@dimen/sp_16"
+            android:text="确定"/>
+    </LinearLayout>
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="241dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorwhite">
+
+    <LinearLayout
+        android:id="@+id/barContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="14dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/color_8B8989"
+            android:text="取消"
+            android:scaleType="fitCenter" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="23dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="选择性别"
+            android:textColor="@color/color_3D3A3A"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="完成"
+            android:textColor="@color/color_F76646"
+            android:textSize="@dimen/sp_14"/>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/linearlayout1"
+        app:layout_constraintTop_toBottomOf="@+id/barContainer"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@drawable/select_sex"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_F4F4F4"/>
+
+        <TextView
+            android:id="@+id/tv_man"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="男"
+            android:gravity="center"
+            android:textColor="@color/color_F76646"
+            android:textSize="@dimen/sp_14"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        app:layout_constraintTop_toBottomOf="@+id/linearlayout1"
+        android:background="@color/color_F4F4F4"/>
+
+    <LinearLayout
+        android:id="@+id/linearlayout2"
+        app:layout_constraintTop_toBottomOf="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_woman"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="女"
+            android:gravity="center"
+            android:textColor="@color/color_8B8989"
+            android:textSize="@dimen/sp_14"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        app:layout_constraintTop_toBottomOf="@+id/linearlayout2"
+        android:background="@color/color_F4F4F4"/>
+
+</android.support.constraint.ConstraintLayout>

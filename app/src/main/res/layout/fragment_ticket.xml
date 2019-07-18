@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_F4F4F4"
+    tools:context="org.eq.android.fargment.MarketFragment">
+
+    <ImageView
+        android:id="@+id/title_background"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:src="@drawable/shape_title_background"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/barContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="14dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_question"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_help_white" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="23dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="我的劵包"
+            android:textColor="@color/colorwhite"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_import"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@mipmap/eq_import_ticket" />
+    </LinearLayout>
+
+
+    <org.eq.android.common.MyTabIndicator
+        android:id="@+id/line_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/colorwhite"
+        app:layout_constraintTop_toBottomOf="@id/title_background"
+        app:tab_color="@color/color_F76646"
+        app:tab_height="4dp"
+        app:tab_show="true"
+        app:tab_text_change_color="@color/color_3D3A3A"
+        app:tab_text_default_color="@color/color_8B8989"
+        app:tab_text_type="normaltext"
+        app:tab_textsize="14sp"
+        app:tab_width="14dp"
+        app:tap_type="rect"
+        app:visiabel_size="3" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_indicator">
+
+    </android.support.v4.view.ViewPager>
+
+</android.support.constraint.ConstraintLayout>

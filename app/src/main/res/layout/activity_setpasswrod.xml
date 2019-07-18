@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="org.eq.android.activity.LoginActivity"
+    android:background="@color/colorwhite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--输入验证码-->
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constrain_getver_code"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/input_code_textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:layout_marginTop="112dp"
+            android:text="@string/login_get_vercode"
+            android:textColor="@color/color_3D3A3A"
+            android:textSize="@dimen/sp_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/input_code_textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:layout_marginTop="168dp"
+            android:text="@string/login_input_code_str"
+            android:textColor="@color/color_3D3A3A"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/input_code_textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="168dp"
+            android:text="+17090075661"
+            android:textColor="@color/color_003B3B"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <org.eq.android.view.FocusPhoneCode
+            android:id="@+id/input_code_fpcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="214dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <RelativeLayout
+            android:id="@+id/input_code_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_46"
+            android:layout_marginEnd="@dimen/activity_vertical_margin"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:layout_marginTop="289dp"
+            android:background="@drawable/login_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/login_next"
+                android:textColor="@color/colorwhite"
+                android:textSize="@dimen/sp_16" />
+
+        </RelativeLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <!--设置密码-->
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constrain_set_password"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/set_pd_textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:layout_marginTop="112dp"
+            android:text="@string/login_reaset_pd_str"
+            android:textColor="@color/color_3D3A3A"
+            android:textSize="@dimen/sp_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <TextView
+            android:id="@+id/set_input_code_textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/activity_vertical_margin"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:layout_marginTop="172dp"
+            android:text="@string/login_set_pd_str"
+            android:textColor="@color/color_3D3A3A"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/set_pd_input_user_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:layout_marginTop="238dp"
+            android:hint="@string/login_set_pd"
+            android:textColorHint="@color/color_E2E2E2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleDrawable="@drawable/selector_password_show_or_hide"
+            app:passwordToggleContentDescription="@string/app_name"
+            app:passwordToggleTintMode="src_atop">
+
+            <EditText
+                android:id="@+id/set_pd_text_input_et_EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_bg_selector"
+                android:inputType="textPassword"
+                android:maxLength="11"
+                android:singleLine="true"
+                android:textColor="@color/colorblack"
+                android:textSize="@dimen/sp_18" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/set_pd_againinput_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:layout_marginTop="316dp"
+            android:hint="@string/login_login_again_pd"
+            android:textColorHint="@color/color_E2E2E2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleDrawable="@drawable/selector_password_show_or_hide"
+            app:passwordToggleContentDescription="@string/app_name"
+            app:passwordToggleTintMode="src_atop">
+
+            <EditText
+                android:id="@+id/set_pd_again_input_et_EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_bg_selector"
+                android:inputType="textPassword"
+                android:maxLength="11"
+                android:singleLine="true"
+                android:textColor="@color/colorblack"
+                android:textSize="@dimen/sp_18" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/set_pd_again_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_46"
+            android:layout_marginEnd="@dimen/activity_vertical_margin"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:layout_marginTop="374dp"
+            android:background="@drawable/login_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/login_setpd_ok"
+                android:textColor="@color/colorwhite"
+                android:textSize="@dimen/sp_16" />
+
+        </RelativeLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>

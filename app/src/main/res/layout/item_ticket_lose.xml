@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="138dp"
+    android:background="@mipmap/background_product"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp"
+    android:paddingRight="10dp"
+    tools:context=".activity.MainActivity">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/productPictureCardView"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:background="@color/colorwhite"
+        android:elevation="0dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@mipmap/product_picture">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/productPictureImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_D8D8D8"
+            android:scaleType="fitXY"
+            tools:src="@mipmap/product_picture" />
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/productNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:maxLines="3"
+        android:textColor="@color/color_B1B0B0"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/productPictureCardView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="出售600面值Nike Sportswear Heritage 券" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/productNumberLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="面值"
+        android:textColor="@color/color_B1B0B0"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/productPictureCardView"
+        app:layout_constraintLeft_toRightOf="@id/productPictureCardView" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/productNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/color_B1B0B0"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/productNumberLabelTextView"
+        app:layout_constraintLeft_toRightOf="@id/productNumberLabelTextView"
+        tools:text="￥600" />
+
+    <!-- 分割线 -->
+    <ImageView
+        android:id="@+id/shape_divider_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/shape_divider_line"
+        app:layout_constraintTop_toBottomOf="@id/productPictureCardView" />
+
+    <ImageView
+        android:id="@+id/statusImageView"
+        android:layout_width="55dp"
+        android:layout_height="44dp"
+        android:elevation="4dp"
+        android:src="@mipmap/eq_expired"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/productPictureCardView" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/bottom_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/actv_lose_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="失效数量："
+            android:textColor="@color/color_B1B0B0"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/lose_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_B1B0B0"
+            android:textSize="12sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/actv_lose_num"
+            app:layout_constraintLeft_toRightOf="@id/actv_lose_num"
+            tools:text="10" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>

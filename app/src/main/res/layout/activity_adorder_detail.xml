@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorwhite"
+    tools:context=".activity.ADOrderDetailActivity">
+
+    <LinearLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="14dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/eq_back_black" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="23dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/color_3D3A3A"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_share"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_share" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    app:cardCornerRadius="12.5dp">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/avatarImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/color_D8D8D8"
+                        tools:src="@mipmap/ic_avatar" />
+
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/nameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:textColor="@color/color_3D3A3A"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="装风的匣子" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/vipImageView"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginStart="6dp"
+                    android:visibility="invisible"
+                    tools:src="@mipmap/ic_vip" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/authImageView"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginStart="3dp"
+                    android:visibility="invisible"
+                    tools:src="@mipmap/ic_auth" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/releaseTimeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="发布于 1小时前"
+                    android:textColor="@color/color_B1B0B0"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:src="@drawable/shape_divider_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:text="单价"
+                    android:textColor="@color/color_333333"
+                    android:textSize="12sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:text="@string/RMB"
+                    android:textColor="@color/color_FF4444"
+                    android:textSize="12sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/salePriceTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="17dp"
+                    android:textColor="@color/color_FF4444"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/divider"
+                    tools:text="600.00" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/saleNumberTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="待售数量 10"
+                    android:textColor="@color/color_B1B0B0"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/orderTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginEnd="14dp"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="出售600面值 Nike Sportswear Heritage 券" />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="116dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="12dp"
+                android:background="@mipmap/background_product_2">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/productPictureCardView"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="17dp"
+                    android:background="@color/colorwhite"
+                    app:cardCornerRadius="7dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/productPictureImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/color_D8D8D8"
+                        android:scaleType="fitXY"
+
+                        tools:src="@mipmap/product_picture" />
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/productNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="17dp"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:maxLines="3"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@id/productPictureCardView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Nike Sportswear Heritage 券" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/priceTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="19dp"
+                    android:layout_marginTop="47dp"
+                    android:layout_marginEnd="13dp"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="600" />
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/priceLabelTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="19dp"
+                    android:layout_marginEnd="2dp"
+                    android:text="@string/RMB"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBaseline_toBaselineOf="@id/priceTextView"
+                    app:layout_constraintRight_toLeftOf="@id/priceTextView" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/priceLabel1TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="19dp"
+                    android:layout_marginEnd="9dp"
+                    android:gravity="center"
+                    android:text="面值"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="12sp"
+                    app:layout_constraintBaseline_toBaselineOf="@id/priceLabelTextView"
+                    app:layout_constraintRight_toLeftOf="@id/priceLabelTextView" />
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/productLogCardView"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@color/colorwhite"
+                    app:cardCornerRadius="3dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/productLogImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/color_D8D8D8"
+                        android:scaleType="fitXY"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        tools:src="@mipmap/product_log" />
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/productStoreNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="6dp"
+                    android:gravity="center"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/productLogCardView"
+                    app:layout_constraintLeft_toRightOf="@id/productLogCardView"
+                    tools:text="耐克官方旗舰店" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="6dp"
+                    android:gravity="center"
+                    android:text="提供承兑"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="10sp"
+                    app:layout_constraintBaseline_toBaselineOf="@id/productStoreNameTextView"
+                    app:layout_constraintLeft_toRightOf="@id/productStoreNameTextView" />
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/dateTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="14dp"
+                    android:layout_marginEnd="12dp"
+                    android:gravity="center"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="10sp"
+                    app:layout_constraintBaseline_toBaselineOf="@id/productStoreNameTextView"
+                    app:layout_constraintRight_toRightOf="parent"
+                    tools:text="有效期：2019.03.23-2049.12.31" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/color_F4F4F4" />
+
+            <LinearLayout
+                android:id="@+id/productDetailLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="14dp"
+                    android:text="数字券详情"
+                    android:textColor="@color/color_3D3A3A"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginEnd="14dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/ic_enter" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/color_F4F4F4" />
+
+            <LinearLayout
+                android:id="@+id/supportTermsLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="14dp"
+                    android:text="平台服务"
+                    android:textColor="@color/color_3D3A3A"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginEnd="14dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/ic_enter" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/color_F4F4F4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="14dp"
+                    android:gravity="center_vertical"
+                    android:text="关于卖家"
+                    android:textColor="@color/color_3D3A3A"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="14dp"
+                    android:src="@drawable/shape_divider_line" />
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="14dp"
+                    android:layout_marginBottom="28dp">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/avatarImageView2"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/ic_avatar"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toRightOf="@id/avatarImageView2"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/nameTextView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="13dp"
+                            android:textColor="@color/color_3D3A3A"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            tools:text="装风的匣子" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/vipImageView2"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginStart="6dp"
+                            android:visibility="invisible"
+                            tools:src="@mipmap/ic_vip" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/authImageView2"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginStart="3dp"
+                            android:visibility="invisible"
+                            tools:src="@mipmap/ic_auth" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:scaleType="fitCenter"
+                            android:src="@mipmap/ic_enter" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/avatarImageView2"
+                        app:layout_constraintRight_toRightOf="parent">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/saleedNumberTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="13dp"
+                            android:textColor="@color/color_8B8989"
+                            android:textSize="12sp"
+                            tools:text="交易数 5" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="9dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/shape_divider_line_vertical"
+                            android:visibility="invisible" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_8B8989"
+                            android:textSize="12sp"
+                            android:visibility="invisible"
+                            tools:text="完成率 98%" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="9dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/shape_divider_line_vertical"
+                            android:visibility="invisible" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/color_8B8989"
+                            android:textSize="12sp"
+                            android:visibility="invisible"
+                            tools:text="用时 3分钟" />
+                    </LinearLayout>
+
+                </android.support.constraint.ConstraintLayout>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/color_F4F4F4" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/buyButton"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/color_F76646"
+        android:padding="0dp"
+        android:text="我要购买"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.eq.android.fargment.MarketFragment"
+    android:background="@color/color_F4F4F4">
+
+
+    <com.youth.banner.Banner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="172dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:indicator_width="12dp"
+        app:indicator_height="4dp"
+        app:indicator_margin="4dp"
+        app:indicator_drawable_selected="@drawable/banner_indicator_selected"
+        app:indicator_drawable_unselected="@drawable/banner_indicator_unselected"
+        app:image_scale_type="center_crop"
+        app:banner_default_image="@mipmap/banner_default_image" />
+
+    <TextView
+        android:id="@+id/tv_realse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="14dp"
+        android:textColor="@color/colorwhite"
+        android:textSize="@dimen/dp_14"
+        android:text="发布信息"/>
+
+    <org.eq.android.common.MyTabIndicator
+        android:id="@+id/line_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        app:layout_constraintTop_toBottomOf="@id/banner"
+        android:background="@color/colorwhite"
+        app:tab_color="@color/color_F76646"
+        app:tab_width="14dp"
+        app:tab_height="4dp"
+        app:tab_text_default_color="@color/color_8B8989"
+        app:tab_text_change_color="@color/color_3D3A3A"
+        app:tab_show="true"
+        app:tab_text_type="normaltext"
+        app:tab_textsize="14sp"
+        app:visiabel_size="2"
+        app:tap_type="rect"
+        >
+    </org.eq.android.common.MyTabIndicator>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/line_indicator"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    </android.support.v4.view.ViewPager>
+
+
+</android.support.constraint.ConstraintLayout>

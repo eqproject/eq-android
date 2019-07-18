@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorwhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/title_background"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:src="@color/colorwhite"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/barContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="14dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/eq_back_black" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="23dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="输入内容"
+            android:textColor="@color/color_3D3A3A"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="保存"
+            android:textColor="@color/color_3D3A3A"
+            android:textSize="@dimen/sp_14"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_F4F4F4"
+        app:layout_constraintTop_toBottomOf="@+id/title_background"/>
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30"
+        android:background="@null"
+        android:maxLength="24"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:hint="输入信息"
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/colorblack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="@dimen/dp_14"
+        android:layout_marginRight="@dimen/dp_14"
+        app:layout_constraintTop_toBottomOf="@+id/line"/>
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_F4F4F4"
+        android:layout_marginLeft="@dimen/dp_14"
+        android:layout_marginRight="@dimen/dp_14"
+        app:layout_constraintTop_toBottomOf="@+id/et_content"/>
+
+</android.support.constraint.ConstraintLayout>

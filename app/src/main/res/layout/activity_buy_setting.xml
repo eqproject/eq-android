@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.BuySettingActivity">
+
+    <View
+        android:id="@+id/top_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toTopOf="@id/bottom_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/bottom_content"
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
+        android:background="@color/colorwhite"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="13dp"
+            android:text="求购"
+            android:textColor="@color/color_3D3A3A"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/closeImageView"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="13dp"
+            android:src="@mipmap/ic_close"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/priceLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="10dp"
+            android:text="单价"
+            android:textColor="@color/color_8B8989"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/priceTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/color_FF4444"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@id/priceLabelTextView"
+            app:layout_constraintLeft_toRightOf="@id/priceLabelTextView"
+            tools:text="¥550" />
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/productContainer"
+            android:layout_width="match_parent"
+            android:layout_height="116dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="14dp"
+            android:background="@mipmap/background_product_2"
+            app:layout_constraintTop_toBottomOf="@id/priceLabelTextView">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/productPictureCardView"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="17dp"
+                android:background="@color/colorwhite"
+                app:cardCornerRadius="7dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/productPictureImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_D8D8D8"
+                    android:scaleType="fitXY"
+
+                    tools:src="@mipmap/product_picture" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/productNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="17dp"
+                android:ellipsize="end"
+                android:maxWidth="200dp"
+                android:maxLines="3"
+                android:textColor="@color/colorwhite"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@id/productPictureCardView"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Nike Sportswear Heritage 券" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/priceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="19dp"
+                android:layout_marginTop="47dp"
+                android:layout_marginEnd="13dp"
+                android:textColor="@color/colorwhite"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="600" />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/priceLabelTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="19dp"
+                android:layout_marginEnd="2dp"
+                android:text="@string/RMB"
+                android:textColor="@color/colorwhite"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@id/priceTextView"
+                app:layout_constraintRight_toLeftOf="@id/priceTextView" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/priceLabel1TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="19dp"
+                android:layout_marginEnd="9dp"
+                android:gravity="center"
+                android:text="面值"
+                android:textColor="@color/colorwhite"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/priceLabelTextView2"
+                app:layout_constraintRight_toLeftOf="@id/priceLabelTextView2" />
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/productLogCardView"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorwhite"
+                app:cardCornerRadius="3dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/productLogImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_D8D8D8"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    tools:src="@mipmap/product_log" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/productStoreNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="14dp"
+                android:layout_marginStart="6dp"
+                android:gravity="center"
+                android:textColor="@color/colorwhite"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/productLogCardView"
+                app:layout_constraintLeft_toRightOf="@id/productLogCardView"
+                tools:text="耐克官方旗舰店" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="14dp"
+                android:layout_marginStart="6dp"
+                android:gravity="center"
+                android:text="提供承兑"
+                android:textColor="@color/colorwhite"
+                android:textSize="10sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/productStoreNameTextView"
+                app:layout_constraintLeft_toRightOf="@id/productStoreNameTextView" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/dateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="14dp"
+                android:layout_marginEnd="12dp"
+                android:gravity="center"
+                android:textColor="@color/colorwhite"
+                android:textSize="10sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/productStoreNameTextView"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:text="有效期：2019.03.23-2049.12.31" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/settingNumContainer"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="14dp"
+            android:background="@drawable/shape_input_border_line"
+            android:elevation="2dp"
+            android:outlineProvider="background"
+            app:layout_constraintTop_toBottomOf="@+id/productContainer">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/sellAllTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginRight="14dp"
+                android:gravity="center"
+                android:text="全部购买"
+                android:textColor="@color/color_F76646"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="12dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/shape_divider_line_vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/sellAllTextView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/unitTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginRight="30dp"
+                android:gravity="center"
+                android:text="张"
+                android:textColor="@color/color_3D3A3A"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/sellAllTextView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/orderNumEditText"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="14dp"
+                android:background="@android:color/transparent"
+                android:hint="最多可购买"
+                android:inputType="number"
+                android:padding="0dp"
+                android:singleLine="true"
+                android:textColor="@color/color_3D3A3A"
+                android:textColorHint="@color/color_E2E2E2"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/unitTextView"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="2" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/buyNumTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="14dp"
+            android:textColor="@color/color_AAAAAA"
+            android:textSize="12sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/settingNumContainer"
+            tools:text="0" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:text="可交易数量"
+            android:textColor="@color/color_AAAAAA"
+            android:textSize="12sp"
+            app:layout_constraintRight_toLeftOf="@id/buyNumTextView"
+            app:layout_constraintTop_toBottomOf="@id/settingNumContainer" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/buyButtonContainer"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/totalPriceLabel1TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:text="应付金额："
+                android:textColor="@color/color_262626"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/totalPriceLabel2TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥"
+                android:textColor="@color/color_FF4444"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@id/totalPriceLabel1TextView"
+                app:layout_constraintLeft_toRightOf="@id/totalPriceLabel1TextView" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/totalPriceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:text="0.0"
+                android:textColor="@color/color_FF4444"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@id/totalPriceLabel2TextView"
+                app:layout_constraintLeft_toRightOf="@id/totalPriceLabel2TextView" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/buyButton"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_F76646"
+                android:padding="0dp"
+                android:text="确认购买"
+                app:layout_constraintRight_toRightOf="parent" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/shape_divider_line"
+            app:layout_constraintBottom_toTopOf="@id/buyButtonContainer" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

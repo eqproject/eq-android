@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginLeft="@dimen/dp_30"
+    android:layout_marginRight="@dimen/dp_30"
+    android:background="@drawable/popupwindow_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_slide_str"
+        android:textColor="@color/color_3D3A3A"
+        android:textSize="@dimen/sp_16"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <org.eq.android.view.SlidingView
+        android:id="@+id/pop_slidingview"
+        android:layout_width="260dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dp_30"/>
+
+
+</LinearLayout>

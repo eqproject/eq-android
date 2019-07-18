@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_F4F4F4">
+
+    <ImageView
+        android:id="@+id/title_background"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/shape_title_background"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/barContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="14dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/eq_back_white" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="23dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="完成"
+            android:textColor="@color/colorwhite"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/eq_quest"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_help_white" />
+
+    </LinearLayout>
+
+    <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_background"
+        app:tr_head_height="100dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycleView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:overScrollMode="never">
+
+        </android.support.v7.widget.RecyclerView>
+    </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/ongoing_constrainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_empty"
+            android:layout_width="228dp"
+            android:layout_height="134dp"
+            android:layout_marginTop="186dp"
+            android:background="@mipmap/eq_ongoing_empty"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="暂时没有相关订单哦"
+            android:textColor="@color/color_8B8989"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_empty" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

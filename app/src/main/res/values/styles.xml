@@ -1,0 +1,61 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorControlNormal">#c5c5c5</item>
+        <item name="colorControlActivated">@color/color_E2E2E2</item>
+        <item name="colorControlHighlight">@color/color_E2E2E2</item>
+    </style>
+
+    <style name="MyStyle">
+                     <item name="android:textColor">@color/color_E2E2E2</item>
+                    <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="TransparentTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="BaseDialogStyle">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <!--默认AbsListView(如ListView或GridView或ScorllView)样式-->
+    <style name="DefaultAbsListViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:overScrollMode">never</item>
+        <item name="android:requiresFadingEdge">none</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+        <!--<item name="android:scrollbarThumbVertical">@drawable/shape_scrollbar</item>
+        <item name="android:listSelector">@drawable/selector_list_item_white</item>
+        <item name="android:dividerHeight">@dimen/default_line_size</item>
+        <item name="android:divider">@color/default_line_color</item>-->
+        <item name="android:smoothScrollbar">true</item>
+        <item name="android:fillViewport">true</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="DialogStyle" parent="@style/BaseDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="DialogStyleNoDim" parent="@style/DialogStyle">
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+</resources>

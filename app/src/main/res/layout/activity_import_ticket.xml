@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorwhite">
+
+    <ImageView
+        android:id="@+id/title_background"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/shape_title_background"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/barContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="14dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/eq_back_white" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="23dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="导入卡劵"
+            android:textColor="@color/colorwhite"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/eq_quest"
+            android:layout_width="18dp"
+            android:visibility="invisible"
+            android:layout_height="18dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_help_white" />
+
+    </LinearLayout>
+    
+    <ImageView
+        android:id="@+id/iv_scode"
+        android:layout_width="122dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="114dp"
+        android:background="@color/color_8B8989"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_8B8989"
+        android:textSize="@dimen/sp_14"
+        android:text="扫描券包二维码进行快速导入"
+        android:layout_marginTop="@dimen/dp_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_scode"/>
+
+    <TextView
+        android:id="@+id/tv_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_8B8989"
+        android:textSize="@dimen/sp_14"
+        android:text="buQnhK15BJWk77BPGxD19LhHX8eny5FtzvTw"
+        android:layout_marginTop="@dimen/dp_40"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv"/>
+
+    <RelativeLayout
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_46"
+        android:layout_marginEnd="@dimen/activity_vertical_margin"
+        android:layout_marginStart="@dimen/activity_vertical_margin"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/login_background"
+        app:layout_constraintTop_toBottomOf="@+id/tv_code">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="复制券包地址"
+            android:textColor="@color/colorwhite"
+            android:textSize="@dimen/sp_16" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

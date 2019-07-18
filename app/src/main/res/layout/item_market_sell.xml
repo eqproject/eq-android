@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="138dp"
+    android:background="@color/colorwhite"
+    android:paddingLeft="14dp"
+    android:paddingTop="14dp"
+    android:paddingRight="14dp"
+    tools:context=".activity.MainActivity">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/productPictureCardView"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:background="@color/colorwhite"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/productPictureImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_D8D8D8"
+            android:scaleType="fitXY"
+            tools:src="@mipmap/product_picture" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/productNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:maxLines="1"
+        android:textColor="@color/color_333333"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@id/productPictureCardView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="求购600面值Nike Sportswear Heritage 券" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/productNumberLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/number"
+        android:textColor="@color/color_8B8989"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@id/productPictureCardView"
+        app:layout_constraintTop_toBottomOf="@id/productNameTextView" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/productNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="@color/color_8B8989"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@id/productNumberLabelTextView"
+        app:layout_constraintTop_toBottomOf="@id/productNameTextView"
+        tools:text="10" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/priceLabel1TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="单价"
+        android:textColor="@color/color_8B8989"
+        android:textSize="12sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/productNameTextView" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/priceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:textColor="@color/color_FF4444"
+        android:textSize="14sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/productNameTextView"
+        tools:text="500" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/priceLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/RMB"
+        android:textColor="@color/color_FF4444"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/priceTextView"
+        app:layout_constraintRight_toLeftOf="@id/priceTextView"
+        app:layout_constraintTop_toBottomOf="@id/priceLabel1TextView" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toRightOf="@id/productPictureCardView"
+        app:layout_constraintTop_toBottomOf="@id/productNumberTextView">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/aliPayImageView"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginEnd="5dp"
+            android:src="@mipmap/ic_ali_pay" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/wechatPayImageView"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:src="@mipmap/ic_wechat_pay" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <ImageView
+        android:id="@+id/shape_divider_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/shape_divider_line"
+        app:layout_constraintTop_toBottomOf="@id/productPictureCardView" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/bottom_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shape_divider_line">
+
+        <Button
+            android:id="@+id/sellButton"
+            android:layout_width="70dp"
+            android:layout_height="26dp"
+            android:background="@drawable/shape_market_sell_button"
+            android:padding="0dp"
+            android:text="@string/sell"
+            android:textColor="@color/colorwhite"
+            android:textSize="14sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/avatarCardView"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@color/colorwhite"
+            app:cardCornerRadius="9dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/avatarImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_D8D8D8"
+                android:scaleType="fitXY"
+                tools:src="@mipmap/ic_avatar" />
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:textColor="@color/color_333333"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/avatarCardView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="王**" />
+
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/vipImageView"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/nameTextView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@mipmap/ic_vip" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/authImageView"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/vipImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@mipmap/ic_auth" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_F4F4F4"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/title_background"
+        android:layout_width="match_parent"
+        android:background="@color/colorwhite"
+        android:layout_height="64dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/barContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="14dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_question"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/eq_back_black" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="23dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="设置"
+            android:textColor="@color/color_3D3A3A"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativelayout_geren"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_background"
+        android:background="@color/colorwhite"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_height="56dp">
+
+
+        <TextView
+            android:id="@+id/tv_lefttext1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/iv_lefticon1"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_3D3A3A"
+            android:text="个人资料"
+            android:padding="10dp"
+            android:textSize="@dimen/sp_14"/>
+
+
+        <FrameLayout
+            android:id="@+id/rightlayout1"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/iv_righticon1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/eq_come_dark"/>
+
+
+        </FrameLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/relativelayout_reset"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativelayout_geren"
+        android:background="@color/colorwhite"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_height="56dp">
+
+
+        <TextView
+            android:id="@+id/tv_lefttext2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/iv_lefticon1"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_3D3A3A"
+            android:text="修改密码"
+            android:padding="10dp"
+            android:textSize="@dimen/sp_14"/>
+
+
+        <FrameLayout
+            android:id="@+id/rightlayout2"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/iv_righticon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/eq_come_dark"/>
+
+
+        </FrameLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/relativelayout_back"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativelayout_reset"
+        android:background="@color/colorwhite"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_height="56dp">
+
+
+        <TextView
+            android:id="@+id/tv_lefttext3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/iv_lefticon1"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_3D3A3A"
+            android:text="退出关闭应用"
+            android:padding="10dp"
+            android:textSize="@dimen/sp_14"/>
+
+
+        <FrameLayout
+            android:id="@+id/rightlayout3"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/iv_righticon3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/eq_come_dark"/>
+
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_46"
+        android:layout_marginEnd="@dimen/activity_vertical_margin"
+        android:layout_marginStart="@dimen/activity_vertical_margin"
+        android:background="@drawable/login_background"
+        android:layout_marginBottom="@dimen/dp_20"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="退出登录"
+            android:textColor="@color/colorwhite"
+            android:textSize="@dimen/sp_16" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@drawable/bg"
+    android:clickable="true"
+    android:gravity="center_vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        <ImageView
+            android:id="@+id/iv_lefticon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:background="@mipmap/eq_feedback"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/tv_lefttext"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/iv_lefticon"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_3D3A3A"
+            android:text="@string/mine_real_auth"
+            android:padding="10dp"
+            android:textSize="@dimen/sp_14"/>
+
+
+        <FrameLayout
+            android:id="@+id/rightlayout"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/iv_righticon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/eq_come_dark"/>
+
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_righttext"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/rightlayout"
+            android:gravity="center"
+            android:text="1.0.0"
+            android:visibility="gone"/>
+
+        <View
+            android:id="@+id/underline"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="#99999999"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

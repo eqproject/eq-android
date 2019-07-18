@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorwhite">
+
+    <!--输入手机号-->
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constrain_no_pd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="22dp"
+            android:text="登录"
+            android:textColor="@color/color_646161"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/no_pd_textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:layout_marginTop="112dp"
+            android:text="手机注册"
+            android:textColor="@color/color_3D3A3A"
+            android:textSize="@dimen/sp_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/no_pd_text_input_user_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:layout_marginTop="170dp"
+            android:hint="@string/login_hint_account"
+            android:textColorHint="@color/color_E2E2E2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_bg_selector"
+                android:inputType="number"
+                android:maxLength="11"
+                android:singleLine="true"
+                android:textColor="@color/colorblack"
+                android:textSize="@dimen/sp_18" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/relativelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/no_pd_text_input_user_layout">
+
+            <RelativeLayout
+                android:id="@+id/send_code"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_46"
+                android:layout_marginTop="50dp"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:background="@drawable/login_background"
+                android:layout_alignParentRight="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="获取验证码"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="@dimen/sp_16" />
+
+            </RelativeLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/send_code"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_marginTop="50dp"
+                android:hint="请输入验证码"
+                android:textColorHint="@color/color_E2E2E2">
+
+                <EditText
+                    android:id="@+id/et_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bg_selector"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:singleLine="true"
+                    android:textColor="@color/colorblack"
+                    android:textSize="@dimen/sp_18" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </RelativeLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/register_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_46"
+        app:layout_constraintTop_toBottomOf="@+id/constrain_no_pd"
+        android:layout_marginEnd="@dimen/activity_vertical_margin"
+        android:layout_marginStart="@dimen/activity_vertical_margin"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/login_white_red">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="获取验证码"
+            android:textColor="@color/colorwhite"
+            android:textSize="@dimen/sp_16" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/dp_30"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我已有易劵账号"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/color_8B8989"/>
+
+        <TextView
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:text="立即登录"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/color_F76646"/>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

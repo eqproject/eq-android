@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.eq.android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <application
+        android:name="org.eq.android.common.EQApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name="org.eq.android.activity.MainActivity"
+            android:label="@string/app_name">
+
+        </activity>
+        <activity android:name="org.eq.android.activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="org.eq.android.activity.LoginActivity">
+
+        </activity>
+
+        <activity android:name=".activity.ResetPasswordActivity" />
+        <activity android:name=".activity.SetPasswordActivity" />
+        <activity android:name=".activity.ReleaseActivity" />
+        <activity android:name=".activity.PayOrderActivity" />
+        <activity android:name=".activity.SellProductListActivity" />
+        <activity android:name=".activity.SellReleaseActivity" />
+        <activity android:name=".activity.BuyProductListActivity" />
+        <activity android:name=".activity.BuyReleaseActivity" />
+        <activity android:name=".activity.ADOrderDetailActivity" />
+        <activity
+            android:name=".activity.BuySettingActivity"
+            android:theme="@style/TransparentTheme" />
+        <activity android:name=".activity.InAcceptanceInfoActivity" />
+        <activity
+            android:name=".activity.SellSettingActivity"
+            android:theme="@style/TransparentTheme" />
+        <activity
+            android:name=".activity.SellFinishActivity"
+            android:theme="@style/TransparentTheme" />
+        <activity
+            android:name=".activity.BuyFinishActivity"
+            android:theme="@style/TransparentTheme" />
+        <activity android:name=".activity.DigitalDescriptionDetail" />
+        <activity android:name=".activity.TicketExplainActivity" />
+        <activity
+            android:name=".activity.AcceptanceActivity"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity android:name=".activity.ImportTicketActivity" />
+        <activity android:name=".activity.SetActivity" />
+        <activity android:name=".activity.RegisterActivity" />
+        <activity android:name=".activity.OngoingListActivity" />
+        <activity android:name=".activity.ReleasingListActivity" />
+        <activity android:name=".activity.CompleteOrderListActivity" />
+        <activity android:name=".activity.WaitPayListActivity" />
+        <activity android:name=".activity.OrderDetailActivity" />
+        <activity android:name=".activity.DigitalDescriptionDetailOtherPeopleActivity" />
+        <activity android:name=".activity.OrderDetailOngoingActivity" />
+        <activity android:name=".activity.PersonalDataActivity"/>
+        <activity android:name=".activity.UploadIDCardInformationActivity"/>
+        <activity android:name=".activity.SetEditTextActivity"/>
+        <activity android:name=".activity.RealNameuthenticationActivity"/>
+        <activity android:name=".activity.ReleaseOrderDetailActivity"/>
+
+    </application>
+
+</manifest>

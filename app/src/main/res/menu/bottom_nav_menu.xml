@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_market"
+        android:icon="@mipmap/ic_market_unselected"
+        android:title="@string/title_market" />
+
+    <item
+        android:id="@+id/navigation_ticket"
+        android:icon="@mipmap/ic_ticket_unselected"
+        android:title="@string/title_ticket" />
+
+    <item
+        android:id="@+id/navigation_mine"
+        android:icon="@mipmap/ic_mine_unselected"
+        android:title="@string/title_mine" />
+
+</menu>

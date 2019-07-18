@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_80000000"
+    tools:context=".activity.BuySettingActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
+        android:background="@color/colorwhite"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/closeImageView"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="14dp"
+            android:src="@mipmap/ic_close"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="50dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="52dp"
+            android:src="@mipmap/ic_selling"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="109dp"
+            android:text="出售中"
+            android:textColor="@color/color_333333"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="139dp"
+            android:text="求购者支付成功后才售卖成功"
+            android:textColor="@color/color_8B8989"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/lastTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="161dp"
+            android:text="出售剩余时间 23:59:59"
+            android:textColor="@color/color_FF4444"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/returnHome"
+            android:layout_width="120dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="224dp"
+            android:background="@drawable/shape_butotn_return_home"
+            android:padding="0dp"
+            android:text="返回首页"
+            android:textColor="@color/colorwhite"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/remindThemTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="275dp"
+            android:text="提醒求购者"
+            android:textColor="@color/color_F76646"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

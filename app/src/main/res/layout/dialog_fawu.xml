@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="430dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorwhite">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_3D3A3A"
+        android:textSize="@dimen/sp_16"
+        android:layout_marginTop="@dimen/dp_20"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="法务支持"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/dp_10"
+        app:layout_constraintTop_toBottomOf="@+id/tv"
+        android:background="@color/color_F4F4F4"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_3D3A3A"
+        android:textSize="@dimen/sp_16"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_14"
+        android:layout_marginRight="@dimen/dp_14"
+        app:layout_constraintTop_toBottomOf="@+id/line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="法务支持"/>
+
+    <RelativeLayout
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_46"
+        android:background="@color/color_F76646"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/sp_16"
+            android:text="朕知道了"
+            android:textColor="@color/colorwhite" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

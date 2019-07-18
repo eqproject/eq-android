@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="78dp"
+    android:background="@mipmap/background_product"
+    android:padding="0dp"
+    tools:context=".activity.SellProductListActivity">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/productPictureCardView"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="15dp"
+        android:background="@color/colorwhite"
+        app:cardCornerRadius="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/productPictureImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_F4F4F4"
+            android:scaleType="fitXY"
+
+            tools:src="@mipmap/product_picture" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/productNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:maxHeight="46dp"
+        android:maxLines="2"
+        android:textColor="@color/color_3D3A3A"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/productPictureCardView"
+        app:layout_constraintRight_toLeftOf="@id/priceLabel1TextView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="华为（HUAWEI） mate20 rs 保时捷设计 麒麟980芯片全面屏大广角徕卡三摄 玄黑色 8+256" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/priceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/color_262626"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="600" />
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/priceLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginEnd="2dp"
+        android:text="@string/RMB"
+        android:textColor="@color/color_262626"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/priceTextView"
+        app:layout_constraintRight_toLeftOf="@id/priceTextView" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/priceLabel1TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginEnd="9dp"
+        android:gravity="center"
+        android:text="面值"
+        android:textColor="@color/color_3D3A3A"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/priceLabelTextView"
+        app:layout_constraintRight_toLeftOf="@id/priceLabelTextView" />
+
+
+</android.support.constraint.ConstraintLayout>

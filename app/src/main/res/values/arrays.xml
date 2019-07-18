@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+
+    <string-array name="upload_select">
+        <item>拍照</item>
+        <item>从相册中选择</item>
+    </string-array>
+
+
+</resources>

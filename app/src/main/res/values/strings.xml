@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">易券</string>
+    <string name="title_market">集市</string>
+    <string name="title_ticket">券包</string>
+    <string name="title_mine">我的</string>
+
+    <!--BaseActivity-->
+    <string name="notifyTitle">权限</string>
+    <string name="notifyMsg">请求需要一些权限</string>
+    <string name="cancel">取消</string>
+    <string name="setting">设置</string>
+
+    <!--登录-->
+    <string name="login_nopassword">免密登录</string>
+    <string name="login_pd_login">密码登录</string>
+    <string name="login_hint_account">请输入手机号</string>
+    <string name="login_hint_password">输入密码</string>
+    <string name="login_login">登录</string>
+    <string name="login_forgetpassword">忘记密码</string>
+    <string name="login_acc_pass_err">账号/密码输入不正确</string>
+    <string name="login_get_vercode">获取验证码</string>
+    <string name="login_nopd_str">未注册手机验证后自动登录</string>
+    <string name="login_slidstring">向右滑动模块</string>
+    <string name="login_input_code_str">已发送4位验证码至 </string>
+    <string name="login_next">下一步</string>
+    <string name="login_reaset_pd_str">重置密码</string>
+    <string name="login_login_again_pd">再次确认密码</string>
+    <string name="login_set_pd_str">您正在使用 15001264591 注册C2C交易平台，请设置密码</string>
+    <string name="login_setpd_ok">确认</string>
+    <string name="login_set_pd">密码由字母和阿拉伯数字组合，至少6位</string>
+    <string name="login_slide_str">请滑动下方模块</string>
+
+    <!--我的-->
+    <string name="mine_wait_paying">待付款</string>
+    <string name="mine_ing">进行中</string>
+    <string name="mine_realse">发布中</string>
+    <string name="mine_comple">完成</string>
+    <string name="mine_real_auth">实名认证</string>
+    <string name="mine_money">资金账户地址管理</string>
+    <string name="mine_recommend">推荐有礼</string>
+    <string name="mine_contact">联系客服</string>
+    <string name="mine_feedback">意见反馈</string>
+    <string name="mine_problem">常见问题</string>
+    <string name="mine_platform_problem">常见问题</string>
+    <string name="mine_platform_protocol">平台协议</string>
+    <string name="mine_about_us">关于我们</string>
+    <string name="mine_set">设置</string>
+
+    <!--首页-->
+    <string name="number">数量</string>
+    <string name="RMB">¥</string>
+    <string name="buy">我要求购</string>
+    <string name="sell">我要出售</string>
+
+    <string name="zhifu">支付</string>
+
+</resources>
